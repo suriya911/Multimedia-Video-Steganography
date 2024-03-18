@@ -17,18 +17,19 @@ To install and run the project locally, follow these steps:
 
 1. Clone the repository to your local machine:
 
-   git clone https://github.com/your-username/Multimedia-Steganography.git
+   git clone https://github.com/suriya911/Multimedia-Video-Steganography
+  
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
 
-    cd Multimedia-Steganography
+    cd Multimedia-Video-Steganography
 
-3. Install the required dependencies:
+4. Install the required dependencies:
 
     pip install -r requirements.txt
 
-4. Run the application:
+5. Run the application:
 
     python app.py
 
-5. After generating your private key, you can securely download it or share it with others via email.
+6. After generating your private key, you can securely download it or share it with others via email.
