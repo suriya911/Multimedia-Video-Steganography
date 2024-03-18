@@ -1,0 +1,56 @@
+{% extends "base.html" %}
+{% block body %}
+    <main>
+        <div class="container_2 Container_2">
+            <!-- Upload Video File Section -->
+            <form method='POST' enctype="multipart/form-data" id="left">
+                {{ vform.hidden_tag() }}
+                <h1>Encrypt Files Using Video Steganography</h1>
+                <div class="upload-section">
+                    <h2>Upload Cover Video File</h2>
+                    {{ vform.cvideo() }}
+                </div>
+                <h1>Upload File less than</h1>
+                {{vform.dropdown()}}
+                <br>
+                {{ vform.submit() }}
+                
+                <div class="frame-info">
+                    <p>Number of Frames in the Video: {{ frame_number }}</p>
+                    <p>Number of Files that can be Embedded: {{ files_to_embed }}</p>
+                </div>
+            </form>
+            <!-- --------------------------------------------------------- -->
+            <form method='POST' enctype="multipart/form-data" id="right">
+                {{ eform.hidden_tag() }}
+                <!-- Upload Multiple Files Section -->
+                <div class="upload-section">
+                    <h2>Upload Files to Hide in the Cover Video</h2>
+                    {{ eform.files(class_='file-input', multiple='multiple') }}
+                    <ul id="file-list" style="list-style-type: none;"></ul>
+                </div>
+
+                <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+                <!-- Display uploaded files -->
+                <div id="uploadedFilesContainer"></div>
+
+                <!-- Upload Public Key Section -->
+                <div class="upload-section">
+                    <h2>Upload Public Key</h2>
+                    {{ eform.Public_KEY() }}
+                </div>
+
+                <br><br>
+                {{ eform.submit }}
+
+            </form>
+
+            <!-- -------------------------------------------------------------- -->
+        </div>
+    </main>
+    <script>
+        {% if file_exists %}
+            downloadFileAndRedirect();
+        {% endif %} 
+    </script>
+{% endblock body %}

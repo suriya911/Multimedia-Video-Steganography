@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block body %}
+
+
+
+    <main>
+        <div class="container_2">
+            <div class="hero"> 
+                <h1>Encrypt and Decrypt Files Using Video Steganography</h1>
+                <div class="home_buttons">
+                    <a href="{{ url_for('encrypt') }}" class="encrypt-btn">Encrypt Files</a>
+                    <a href="{{ url_for('decrypt') }}" class="decrypt-btn">Decrypt Files</a>
+                </div>
+            </div>
+        </div>
+    </main>
+{% endblock body %}

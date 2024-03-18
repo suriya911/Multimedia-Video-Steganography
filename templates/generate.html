@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block body %}
+    <main>
+        <form method='POST' enctype="multipart/form-data">
+            {{form.hidden_tag()}}
+            <div class="container_2">
+                <h1>Generate random RSA Public and Private Key</h1>
+
+                <!-- Upload Video File Section -->
+                <div class="form__group field" id="email-field" >
+                    <h2>Enter Your Sender Email-Id</h2>
+                    {{ form.sender.label }} {{ form.sender }}
+                    <br><br>
+                </div>
+
+                <!-- Upload Private Key Section -->
+                <div class="form__group field" id="email-field" >
+                    <h2>Your Private Key will be Downloaded</h2>
+                    <br><br>
+                </div>
+                <!-- Decrypt Button -->
+                {{ form.submit() }}
+            </div>  
+
+        </form>
+    </main>
+<script>
+    {% if file_exists %}
+        downloadKeyAndRedirect();
+    {% endif %} 
+</script>
+{% endblock body %}

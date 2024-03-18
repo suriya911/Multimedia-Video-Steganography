@@ -1,0 +1,248 @@
+/* Set default font family and remove default margin */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+}
+
+/* Set container width, center align it, and arrange child elements in a flexbox */
+.container_1 {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Limit logo size and ensure it scales properly */
+.logo-img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Styling for header element */
+header {
+    background-color: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    opacity: 0.85;
+}
+
+/* Styling for navigation links */
+header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* Styling for navigation list items */
+header nav ul li {
+    margin-left: 20px;
+}
+
+/* Styling for navigation links */
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #00b4c5;
+}
+
+/* Hover effect for navigation links */
+header nav ul li a:hover {
+    background-color: #025c64;
+}
+
+/* Styling for main content area */
+main {
+    padding: 50px 0;
+    text-align: center;
+    margin: 0 auto;
+    flex: 1; /* Ensure main takes remaining space */
+    background-image: url('static/images/bg.jpg');
+    background-size: cover; 
+    background-position: center; 
+} 
+
+/* Styling for hero section */
+.hero h1 {
+    font-size: 46px;
+    margin-bottom: 30px;
+    color: white;
+}
+
+/* Styling for buttons in home section */
+.home_buttons a {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background-color: #00b4c5;
+    padding: 15px 30px;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: background-color 0.3s ease;
+    border: 2.4px solid #000;
+}
+
+/* Hover effect for home buttons */
+.home_buttons a:hover {
+    background-color: #025c64;
+}
+
+/* Styling for upload section */
+.upload-section {
+    margin-bottom: 20px;
+}
+
+/* Styling for heading within upload section */
+.upload-section h2 {
+    margin-bottom: 10px;
+}
+
+/* Styling for frame information */
+.frame-info {
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+/* Styling for container_2 */
+.Container_2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Styling for left section within Container_2 */
+#left {
+    flex: 1;
+    margin-right: 10px; 
+}
+
+/* Styling for right section within Container_2 */
+#right {
+    flex: 1;
+    margin-left: 10px; 
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    /* Stack Container_2 content in smaller screens */
+    .Container_2 {
+        flex-direction: column;
+    }
+
+    /* Adjust left and right sections for smaller screens */
+    #left, #right {
+        margin: 0; /* Reset margin */
+        width: 100%; /* Occupy full width */
+    }
+}
+
+/* Styling for container_2 */
+.container_2 {
+    width: 80%;
+    margin: 0 auto;
+    opacity: 0.8;
+    padding: 20px;
+    background-color: #f2f2f2;
+    border-radius: 10px;
+    border: 3px solid rgb(210, 180, 180);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for heading within container_2 */
+.container_2 h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333; 
+}
+
+/* Styling for paragraphs within container_2 */
+.container_2 p{
+    color: black;
+    font-weight: 200;
+    font-size: large;
+}
+
+/* Styling for headings within container_2 */
+.container_2 h2{
+    color: black;
+}
+
+/* Styling for file input within upload section */
+.upload-section input[type="file"] {
+    padding: 10px;
+    font-size: 16px;
+}
+
+/* Styling for paragraph within frame-info */
+.frame-info p {
+    font-size: 19px;
+    margin-bottom: 10px;
+    color: black;
+}
+
+/* Styling for form field */
+.form__field {
+    font-family: sans-serif;
+    width: 30%;
+    border: 0;
+    border-bottom: 2px solid #00b4c5;
+    outline: 0;
+    font-size: 0.6rem;
+    color: black;
+    padding: 7px 0;
+    background: transparent;
+}
+
+/* Styling for focus state of form field */
+.form__field:focus {
+    padding-bottom: 6px;
+    border-width: 5px;
+    border-image: linear-gradient(to right, #00b4c5, #00b4c5);
+    border-image-slice: 1;
+}
+
+/* Styling for submit button */
+input#submit {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #00b4c5;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border: 2.4px solid #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+/* Hover effect for submit button */
+input#submit:hover {
+    background-color: #025c64;
+}
+
+/* Styling for file upload button */
+.upload-enc-file {
+    padding: 10px;
+    border: 2px solid #11998e;
+    background-color: #f2f2f2;
+    color: #333;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+/* Hover effect for file upload button */
+.upload-enc-file:hover {
+    border-color: #0d7f75;
+    background-color: #e0e0e0;
+}
+
+/* Styling for file list items */
+#file-list > li > a{
+    color: #000;
+}

@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block body %}
+    <main>
+        <form method='POST' enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <div class="container_2">
+                <h1>Decrypt Files Using Video Steganography</h1>
+
+                <!-- Upload Video File Section -->
+                <div class="upload-section">
+                    <h2>Upload Encrypted Video File</h2>
+                    {{ form.evideo() }}
+                </div>
+
+                <!-- Upload Private Key Section -->
+                <div class="upload-section">
+                    <h2>Upload Private Key</h2>
+                    {{ form.Private_KEY() }}
+                </div>
+                <!-- Decrypt Button -->
+                {{ form.submit() }}
+            </div>  
+
+        </form>
+    </main>
+    <script>
+        {% if file_exists %}
+            downloadFileAndRedirect();
+        {% endif %} 
+    </script>
+{% endblock body %}
