@@ -1,9 +1,9 @@
 from flask import Flask, render_template, send_file, session
 import os
 from flask_wtf import FlaskForm
-from wtforms import EmailField, FileField, SelectField, SubmitField, MultipleFileField
+from wtforms import StringField, FileField, SelectField, SubmitField, MultipleFileField
 from werkzeug.utils import secure_filename
-from wtforms.validators import InputRequired
+from wtforms.validators import InputRequired, Email
 import decoding as vd
 import encoding as ve
 import video as v
@@ -43,7 +43,7 @@ class EncryptForm(FlaskForm):
     submit = SubmitField("ENCRYPT")
 
 class GenerateKeysForm(FlaskForm):
-    sender = EmailField("📩",validators=[InputRequired()],render_kw={
+    sender = StringField("📩", validators=[InputRequired(), Email()], render_kw={
         'class_': 'form__field',
         'style': 'font-family: sans-serif; border: 10; border-bottom: 2px solid #0d0c0c; outline: 0; font-size: 1.3rem; color: 1f1f1f; padding: 7px; background: transparent; transition: border-color 0.2s;'
     })
